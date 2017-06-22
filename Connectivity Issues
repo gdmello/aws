@@ -1,0 +1,13 @@
+## SSH connection hangs
+  
+  $ss -i <path to private key/.pem file> <ec2 ipaddress>
+  ... 
+  
+  Verify the server has access to the ec2 instance (vpn routes inbound cidrs, cidr mask say /16 not /22, security group inbound rule restrictions, routing table restrictions)
+
+## SSH connection refused
+  
+  $ss -i <path to private key/.pem file> <ec2 ipaddress>
+  ... Connection refused
+  
+  Verify that the ec2 instance booted up correctly - check boot logs.
